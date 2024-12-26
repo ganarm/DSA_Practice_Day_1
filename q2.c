@@ -1,4 +1,8 @@
 // Q2
+/*
+Write a menu-driven program that utilizes a singly linked list to handle operations such as adding, removing, and displaying books, 
+as well as searching for specific books and counting the total number of books available
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
