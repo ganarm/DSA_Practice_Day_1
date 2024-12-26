@@ -215,3 +215,247 @@ int main() {
     }
     return 0;
 }
+
+
+/*
+
+OUTPUT::
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 1
+
+Enter Book ID: 11
+Enter Book Title: Sweet Heart
+Enter Book Author: G R Mali
+
+Book added successfully!
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 2
+
+Books available:
+ID: 11, Title: Sweet Heart, Author: G R Mali
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 1
+
+Enter Book ID: 22
+Enter Book Title: My Life
+Enter Book Author: M D Mahajan
+
+Book added successfully!
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 1
+
+Enter Book ID: 55
+Enter Book Title: Mera Laal
+Enter Book Author: G Mali
+
+Book added successfully!
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 2
+
+Books available:
+ID: 11, Title: Sweet Heart, Author: G R Mali
+ID: 22, Title: My Life, Author: M D Mahajan
+ID: 55, Title: Mera Laal, Author: G Mali
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 4
+
+Enter Book ID to search: 22
+
+Book found: ID: 22, Title: My Life, Author: M D Mahajan
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 7
+
+Enter Book Title to search: Mera Laal
+
+Book found: ID: 55, Title: Mera Laal, Author: G Mali
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 5
+
+Total number of books: 3
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 2
+
+Books available:
+ID: 11, Title: Sweet Heart, Author: G R Mali
+ID: 22, Title: My Life, Author: M D Mahajan
+ID: 55, Title: Mera Laal, Author: G Mali
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 3
+
+Enter Book ID to remove: 22
+
+Book removed successfully!
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 2
+
+Books available:
+ID: 11, Title: Sweet Heart, Author: G R Mali
+ID: 55, Title: Mera Laal, Author: G Mali
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 5
+
+Total number of books: 2
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 7
+
+Enter Book Title to search: h
+
+Book with title 'h' not found.
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 6
+
+Enter Book Title to remove: Mera Laal
+
+Book with title 'Mera Laal' removed successfully!
+
+
+Menu:
+1. Add Book
+2. Display Books
+3. Remove Book by ID
+4. Search Book by ID
+5. Count Books
+6. Remove Book by Title
+7. Search Book by Title
+8. Exit
+Enter your choice: 8
+*/
