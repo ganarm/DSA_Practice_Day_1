@@ -24,18 +24,30 @@ void menu();
 
 void insertCar() {
     struct Car *newCar = (struct Car *)malloc(sizeof(struct Car));
+    
+    // Reading Car Model with spaces
     printf("\nEnter Car Model: ");
-    scanf("%s", newCar->model);
+    getchar();  // Consume any leftover newline character from previous input
+    scanf("%[^\n]", newCar->model);
+    
+    // Reading Manufacturer with spaces
     printf("Enter Manufacturer: ");
-    scanf("%s", newCar->manufacturer);
+    getchar();  // Consume any leftover newline character from previous input
+    scanf("%[^\n]", newCar->manufacturer);
+    
+    // Reading price
     printf("Enter Price: ");
     scanf("%f", &newCar->price);
+    
+    // Reading engine capacity
     printf("Enter Engine Capacity (in liters): ");
     scanf("%f", &newCar->engine_capacity);
     
+    // Set the new car's pointers to NULL initially
     newCar->prev = NULL;
     newCar->next = NULL;
 
+    // Insert the new car into the doubly linked list
     if (head == NULL) {
         head = newCar;
     } else {
@@ -49,10 +61,13 @@ void insertCar() {
     printf("\nCar model added successfully!\n");
 }
 
+
+
 void deleteCar() {
     char model[50];
+    getchar();
     printf("\nEnter the Car model to delete: ");
-    scanf("%s", model);
+    scanf("%[^\n]", model);
     
     struct Car *temp = head;
     while (temp != NULL) {
@@ -80,7 +95,8 @@ void deleteCar() {
 void updateCarPrice() {
     char model[50];
     printf("\nEnter the Car model to update price: ");
-    scanf("%s", model);
+    getchar();
+    scanf("%[^\n]", model);
     
     struct Car *temp = head;
     while (temp != NULL) {
@@ -119,7 +135,8 @@ void listCarsInPriceRange() {
 void searchCarByModel() {
     char model[50];
     printf("\nEnter Car model to search: ");
-    scanf("%s", model);
+    getchar();
+    scanf("%[^\n]", model);
     
     struct Car *temp = head;
     while (temp != NULL) {
@@ -144,7 +161,7 @@ void displayCars() {
     struct Car *temp = head;
     printf("\nList of all cars:\n");
     while (temp != NULL) {
-        printf("Model: %s, Manufacturer: %s, Price: %.2f, Engine Capacity: %.2fL\n",
+        printf("\n Model: %s \n Manufacturer: %s \n Price: %.2f \n Engine Capacity: %.2fL\n",
                 temp->model, temp->manufacturer, temp->price, temp->engine_capacity);
         temp = temp->next;
     }
@@ -193,3 +210,255 @@ int main() {
     return 0;
 }
 
+/*
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 1
+
+Enter Car Model: Model 1
+Enter Manufacturer: KK
+Enter Price: 45000
+Enter Engine Capacity (in liters): 50
+
+Car model added successfully!
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 1
+
+Enter Car Model: Model 2
+Enter Manufacturer: MMM
+Enter Price: 952400
+Enter Engine Capacity (in liters): 65
+
+Car model added successfully!
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 2
+
+Enter the Car model to delete: Model 3
+
+Car model 'Model 3' not found!
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 6
+
+List of all cars:
+
+ Model: Model 1 
+ Manufacturer: KK 
+ Price: 45000.00 
+ Engine Capacity: 50.00L
+
+ Model: Model 2 
+ Manufacturer: MMM 
+ Price: 952400.00 
+ Engine Capacity: 65.00L
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 4
+
+Enter the price range (lower upper): 20000 60000
+
+Cars in the price range 20000.00 - 60000.00:
+Model: Model 1, Manufacturer: KK, Price: 45000.00, Engine Capacity: 50.00L
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 5
+
+Enter Car model to search: Model 5
+
+Car model 'Model 5' not found!
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 5
+
+Enter Car model to search: Model 1
+
+Car Details:
+Model: Model 1
+Manufacturer: KK
+Price: 45000.00
+Engine Capacity: 50.00L
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 6
+
+List of all cars:
+
+ Model: Model 1 
+ Manufacturer: KK 
+ Price: 45000.00 
+ Engine Capacity: 50.00L
+
+ Model: Model 2 
+ Manufacturer: MMM 
+ Price: 952400.00 
+ Engine Capacity: 65.00L
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 3
+
+Enter the Car model to update price: Model
+
+Car model 'Model' not found!
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 3
+
+Enter the Car model to update price: Model 1
+Enter new price: 6845210
+
+Price updated successfully for 'Model 1'.
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 6
+
+List of all cars:
+
+ Model: Model 1 
+ Manufacturer: KK 
+ Price: 6845210.00 
+ Engine Capacity: 50.00L
+
+ Model: Model 2 
+ Manufacturer: MMM 
+ Price: 952400.00 
+ Engine Capacity: 65.00L
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 4
+
+Enter the price range (lower upper): 200 6895210
+
+Cars in the price range 200.00 - 6895210.00:
+Model: Model 1, Manufacturer: KK, Price: 6845210.00, Engine Capacity: 50.00L
+Model: Model 2, Manufacturer: MMM, Price: 952400.00, Engine Capacity: 65.00L
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 2
+
+Enter the Car model to delete: Model 1
+
+Car model 'Model 1' deleted successfully!
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 6
+
+List of all cars:
+
+ Model: Model 2 
+ Manufacturer: MMM 
+ Price: 952400.00 
+ Engine Capacity: 65.00L
+
+Menu:
+1. Insert new Car
+2. Delete Car by Model
+3. Update Car Price
+4. List Cars in Price Range
+5. Search Car by Model
+6. Display All Cars
+7. Exit
+Enter your choice: 7
+
+
+=== Code Execution Successful ===
+*/
