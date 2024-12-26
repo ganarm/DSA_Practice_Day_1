@@ -67,3 +67,26 @@ int main() {
 
     return 0;
 }
+
+/*
+Make Sure Give input like this you can understand what exactly difference
+OUTPUT ::
+
+Enter the number of rows: 4
+Enter the number of columns: 4
+Enter the elements of the matrix:
+0 1 0 0
+0 0 0 3
+2 0 0 0 
+5 2 0 0
+Original Compact Matrix:
+0 1 2 3 3 
+1 3 0 0 1 
+1 3 2 5 2 
+
+Transposed Compact Matrix:
+1 3 0 0 1 
+0 1 2 3 3 
+1 3 2 5 2 
+
+*/
